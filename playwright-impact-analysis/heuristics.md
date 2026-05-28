@@ -1,6 +1,6 @@
 # Heuristics for Unmapped Files
 
-If the project contains `__e2e__/e2e-test-mapping.md`, use that file first.
+If the project contains an E2E test mapping file, use that file first.
 Only use these heuristics when the mapping file is missing or does not cover a changed file.
 
 The mapping file is the primary source of truth.
@@ -16,10 +16,13 @@ If confidence is low:
 
 ## 2. File-type guidance
 
-### Next.js pages
+### Routes / pages
 Examples:
 - `src/pages/**/*.tsx`
-- `src/pages/**/*.js`
+- `src/app/**/page.tsx`
+- `app/routes/**`
+- `routes/**`
+- other framework route or page entry files
 
 Likely impact:
 - page entry
@@ -34,6 +37,9 @@ Recommendation:
 ### Components
 Examples:
 - `src/components/**`
+- `app/components/**`
+- `components/**`
+- `packages/ui/**`
 
 Likely impact:
 - UI interaction flows
@@ -50,6 +56,8 @@ Recommendation:
 ### Hooks
 Examples:
 - `src/hooks/**`
+- `hooks/**`
+- `composables/**`
 
 Likely impact:
 - cross-cutting behavior
@@ -65,6 +73,9 @@ Recommendation:
 Examples:
 - `src/services/**`
 - `src/pages/api/**`
+- `app/api/**`
+- `server/**`
+- `lib/api/**`
 - config files
 - app bootstrap
 
@@ -101,6 +112,8 @@ Examples:
 - `src/components/Billing/...` → billing-related specs
 - `src/pages/projects/...` → project-related specs
 - `src/hooks/usePermissions.ts` → auth/access-related specs
+- `app/routes/account/...` → account-related specs
+- `packages/ui/Dialog/...` → dialog or shared UI specs
 
 ## 4. Risk multipliers
 
@@ -128,7 +141,7 @@ Heuristic results should usually be MEDIUM or LOW unless the signal is unusually
 
 When heuristics produce a strong, repeated pattern, suggest a candidate mapping addition in this format:
 
-- `src/path/to/source.tsx` → `__e2e__/target.spec.ts`
-- `src/path/to/folder/**` → `__e2e__/folder/**`
+- `<source-path>` → `<e2e-folder>/target.spec.ts`
+- `<source-folder>/**` → `<e2e-folder>/folder/**`
 
 Only suggest additions when confidence is reasonably strong.

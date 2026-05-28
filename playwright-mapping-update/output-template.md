@@ -9,5 +9,6 @@
 
 ### Additions
 ```diff
-+ src/path/to/file.ts → __e2e__/test.spec.ts (HIGH)
-+ src/components/NewFeature/** → __e2e__/new-feature.spec.ts (MEDIUM)
++ <source-path> → <e2e-folder>/test.spec.ts (HIGH)
++ <source-folder>/** → <e2e-folder>/new-feature.spec.ts (MEDIUM)
+```

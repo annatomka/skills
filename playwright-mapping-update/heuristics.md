@@ -5,12 +5,14 @@
 Map based on:
 - feature name similarity
 - folder structure
-- route names (Next.js pages)
+- route or page names, when the framework has file-based routing
 - domain terms
 
 Examples:
-- `src/pages/projects/**` → `__e2e__/projects.spec.ts`
-- `src/components/Diagram/**` → `__e2e__/diagram.spec.ts`
+- `src/pages/projects/**` → `<e2e-folder>/projects.spec.ts`
+- `app/routes/account/**` → `<e2e-folder>/account.spec.ts`
+- `src/components/Diagram/**` → `<e2e-folder>/diagram.spec.ts`
+- `packages/ui/Dialog/**` → `<e2e-folder>/dialog.spec.ts`
 
 ---
 

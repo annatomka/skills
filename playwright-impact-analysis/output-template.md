@@ -1,5 +1,5 @@
 ## Scope analyzed
-- Compared against: `main`
+- Compared against: `<default branch or requested base>`
 - Change sources included: `<staged / unstaged / stash / local commits>`
 - Changed files reviewed:
   - `<file 1>`
@@ -32,4 +32,5 @@
 
 ### Exact tests
 ```bash
-yarn test:e2e-local <file1> <file2>
+<e2e-command> <file1> <file2>
+```
