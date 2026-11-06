@@ -140,3 +140,16 @@ Useful for:
 - Issue reproduction clips
 - Documentation snippets
 ---
+
+## Conversation skills
+Skills for working with the agent's own answers.
+
+### tldr
+Shrinks the agent's previous answer, or every finding so far in the session with `all`, into a one-sentence verdict, up to three short findings and one next step.
+
+It only runs when you call it (`/tldr`), and it adds no new claims: anything that looks wrong while summarizing is flagged in one extra line instead of silently fixed.
+
+Useful for:
+- Long investigations
+- Reading results on a phone
+- Pasting a quick status into chat
