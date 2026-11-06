@@ -1,7 +1,7 @@
 ---
 name: tldr
 description: Shrink Claude's previous answer (or every finding so far in the session) into a one-sentence verdict plus up to three short findings. Use only when the user types /tldr or asks for "the short version", "one-sentence verdict", "summarize what you found".
-argument-hint: [all] (optional: summarize every finding in the session, not only the last answer)
+argument-hint: "[all] (optional: summarize every finding in the session, not only the last answer)"
 disable-model-invocation: true
 ---
 
